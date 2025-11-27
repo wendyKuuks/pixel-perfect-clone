@@ -11,6 +11,8 @@ import groupTherapy from "@/assets/group-therapy.jpg";
 import counseling from "@/assets/counseling.jpg";
 import consultation from "@/assets/consultation.jpg";
 import natureLandscape from "@/assets/nature-landscape.jpg";
+import link911 from "@/assets/911link.png";
+import suicideLink from "@/assets/suicidelink.png";
 
 const Home = () => {
   const services = [
@@ -44,6 +46,18 @@ const Home = () => {
               Call Me
             </Button>
           </div>
+        </div>
+      </section>
+
+      {/* Infinite Scroll Icons Section */}
+      <section className="py-8 overflow-hidden bg-muted/30">
+        <div className="flex animate-scroll-right">
+          {[...Array(10)].map((_, i) => (
+            <div key={i} className="flex gap-12 px-6 flex-shrink-0">
+              <img src={link911} alt="911 Crisis Support" className="h-16 w-auto object-contain" />
+              <img src={suicideLink} alt="Suicide Prevention" className="h-16 w-auto object-contain" />
+            </div>
+          ))}
         </div>
       </section>
 
