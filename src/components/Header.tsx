@@ -65,7 +65,7 @@ const Header = () => {
       {/* Logo Section */}
       <div
         className={`container mx-auto px-4 transition-all duration-300 overflow-hidden ${
-          isScrolled ? "max-h-0 opacity-0 py-0" : "max-h-40 opacity-100 pt-14 pb-6"
+          isScrolled ? "max-h-0 opacity-0 py-0" : "max-h-80 opacity-100 pt-4 pb-4"
         }`}
       >
         <section className="flex items-center justify-center">
@@ -85,7 +85,7 @@ const Header = () => {
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" className="md:hidden">
-                <Menu className="w-6 h-6" />
+                <Menu className="w-10 h-10" />
               </Button>
             </SheetTrigger>
             <SheetContent side="left" className="w-64">

@@ -1,22 +1,15 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, ArrowBigRight, ArrowDownRight, ArrowRight, Icon, PersonStandingIcon, User, User2, MessageCircle, FileText } from "lucide-react";
+import { Arrow } from "@radix-ui/react-tooltip";
+import logo from "../assets/bloomlylogo.svg";
 
 const Footer = () => {
   return (
-    <footer className="bg-muted border-t border-border mt-20">
+    <footer className="bg-red-50 border-t border-border mt-16">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div>
-            <div className="w-16 h-16 rounded-full border-2 border-primary flex items-center justify-center mb-4">
-              <svg viewBox="0 0 24 24" className="w-8 h-8 text-primary" fill="none" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v18m9-9H3" />
-              </svg>
-            </div>
-            <div className="mb-2">
-              <div className="font-bold text-lg">HARA</div>
-              <div className="font-bold text-lg">LUMINA</div>
-            </div>
-            <p className="text-xs text-muted-foreground">PSYCHIATRIC MENTAL HEALTH<br />NURSE PRACTITIONER</p>
+          <div className="">
+            <img src={logo} alt="Bloomly" className="h-26 w-24" />
           </div>
 
           <div>
@@ -33,17 +26,28 @@ const Footer = () => {
             <h3 className="font-semibold mb-4">Expertise</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link to="/expertise" className="hover:text-primary transition-colors">
+                <Link
+                  to="/expertise"
+                  className="hover:text-primary transition-colors flex gap-2"
+                >
+                  <ArrowRight className="w-4 h-4" />
                   Therapy Treatment
                 </Link>
               </li>
               <li>
-                <Link to="/expertise" className="hover:text-primary transition-colors">
-                  Medication Management
+                <Link
+                  to="/expertise"
+                  className="hover:text-primary transition-colors flex gap-2"
+                >
+                  <ArrowRight className="w-4 h-4" /> Medication Management
                 </Link>
               </li>
               <li>
-                <Link to="/expertise" className="hover:text-primary transition-colors">
+                <Link
+                  to="/expertise"
+                  className="hover:text-primary transition-colors flex gap-2"
+                >
+                  <ArrowRight className="w-4 h-4" />
                   Other Options
                 </Link>
               </li>
@@ -54,18 +58,27 @@ const Footer = () => {
             <h3 className="font-semibold mb-4">Explore</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link to="/specialist" className="hover:text-primary transition-colors">
-                  Specialist
+                <Link
+                  to="/specialist"
+                  className="hover:text-primary transition-colors flex gap-2"
+                >
+                  <User className="w-4 h-4" /> Specialist
                 </Link>
               </li>
               <li>
-                <Link to="/blog" className="hover:text-primary transition-colors">
-                  Blog
+                <Link
+                  to="/blog"
+                  className="hover:text-primary transition-colors flex gap-2"
+                >
+                  <FileText className="w-4 h-4" /> Blog
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="hover:text-primary transition-colors">
-                  Contact
+                <Link
+                  to="/contact"
+                  className="hover:text-primary transition-colors flex gap-2"
+                >
+                  <MessageCircle className="w-4 h-4" /> Contact
                 </Link>
               </li>
             </ul>
@@ -75,10 +88,11 @@ const Footer = () => {
         <div className="mt-8 pt-8 border-t border-border flex flex-wrap justify-between items-center text-sm text-muted-foreground">
           <div className="flex gap-4">
             <Link to="#" className="hover:text-primary transition-colors">
-              Merchant Policies
-            </Link>
-            <Link to="#" className="hover:text-primary transition-colors">
               Legal Notice
+            </Link>
+
+            <Link to="#" className="hover:text-primary transition-colors">
+              Privacy Policy
             </Link>
           </div>
           <div className="flex items-center gap-2">
